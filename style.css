@@ -1,0 +1,236 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #72492e; 
+    color: #471d00; 
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+.cabeçalho__menu-hamburguer {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background-image: url("img/Menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cabeçalho {
+    background-color: #e0d3c1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.container__imagem {
+    padding: 1em;
+    width: 40%;
+    margin: 0px 0px 0px 20px;
+}
+
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+}
+
+.container__botao:checked ~ .lista-menu {
+    display: block;
+}
+
+.lista-menu__titulo,
+.lista-menu__item {
+    padding: 1em;
+    background-color: var(--branco);
+    color: #d4c5ae; 
+}
+
+.lista-menu__titulo {
+    color: var(--laranja);
+    font-weight: 700;
+}
+
+.lista-menu__link {
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    color: #d4c5ae;
+    background-clip: text;
+    text-transform: uppercase;
+}
+
+.container__botao {
+    display: none;
+}
+
+/* Rodapé */
+/* Estilo do Rodapé */
+footer {
+    background-color: #e0d3c1; 
+    color: #5a3e2b; 
+    padding: 20px;
+    border-top: 2px solid #d4c5ae;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Permite ajustar o layout em telas menores */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-left, .footer-right {
+    width: 45%; 
+    margin-bottom: 20px;
+}
+
+.footer-left h4, .footer-right h4 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #3f2c1d; 
+}
+
+.footer-left ul, .footer-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-left li, .footer-right li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+}
+
+.footer-left li img, .footer-right li a {
+    margin-right: 10px;
+}
+
+.footer-left li .icon {
+    height: 20px; 
+    width: 20px;
+    margin-right: 10px;
+}
+
+.footer-right li a {
+    text-decoration: none;
+    color: #5a3e2b;
+    font-weight: bold;
+}
+
+.footer-right li a:hover {
+    color: #3f2c1d; 
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .footer-left, .footer-right {
+        width: 100%; 
+        text-align: center;
+    }
+
+    .footer-left ul, .footer-right ul {
+        text-align: center;
+    }
+}
+
+
+/* Títulos */
+h1, h2 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+h1 {
+    font-size: 2em;
+    color: #d4b9a0; 
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #d4b9a0; 
+}
+
+/* Seção de Balões de Texto */
+.text-image-section {
+    display: flex;
+    flex-direction: column; /* Alinha balões verticalmente */
+    align-items: center;
+    gap: 30px; /* Espaço maior entre os balões */
+    margin: 20px;
+}
+
+.text-balloon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espaça o texto e a imagem */
+    background-color: #e0d3c1; 
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 90%; /* Aumenta largura do balão */
+    max-width: 800px; /* Limita largura máxima */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: left;
+}
+
+.text-balloon p {
+    margin: 0;
+    font-size: 1.1em; 
+    flex: 1; /* Faz o texto ocupar o restante do espaço */
+}
+
+.text-balloon img {
+    height: 150px; 
+    width: auto; /* Mantém a proporção */
+    border-radius: 5px; /* Canto levemente arredondado */
+    border: 2px solid #d4c5ae; 
+    margin-left: 20px; /* Espaçamento entre texto e imagem */
+    order: 1; 
+}
+
+/* Balão Centralizado */
+.central-balloon {
+    background-color: #e0d3c1;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    text-align: center;
+}
+
+.central-balloon ul {
+    list-style: none;
+    padding: 0;
+}
+
+.central-balloon li {
+    margin: 10px 0;
+    font-size: 1.2em; 
+    color: #3f2c1d; 
+}
+
+/* Ajustes de Responsividade */
+@media (max-width: 768px) {
+    .text-balloon {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .text-balloon img {
+        margin: 20px 0 0 0; 
+    }
+}
